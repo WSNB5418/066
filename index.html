@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系车主</title>
+    <style>
+        /* 基础样式 */
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 1; /* 确保内容在水印上方 */
+        }
+        .call-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        .call-btn:hover {
+            background-color: #0056b3;
+        }
+        .tips {
+            color: #666;
+            margin-top: 30px;
+            font-size: 14px;
+        }
+
+        /* 水印样式 */
+        body::after {
+            content: "066车牌专属 ©莫山山"; /* "066车牌专属 ©莫山山 */
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none; /* 允许穿透点击 */
+            opacity: 0.15; /* 透明度 */
+            font-size: 40px;
+            color: #666;
+            transform: rotate(-30deg); /* 旋转角度 */
+            z-index: 1; /* 确保水印在内容上方 */
+            text-align: center;
+            padding-top: 30%;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 20%,
+                rgba(255,255,300,0.3) 20%,
+                rgba(255,255,300,0.3) 40%
+            ); /* 增加纹理防截图 */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>联系车主</h1>
+        <a href="15556403521 " class="call-btn">点击拨打</a >
+        <div class="tips">
+            <p>请确保已插入SIM卡</p >
+            <p>部分安卓手机需要手动允许拨号权限</p >
+        </div>
+    </div>
+</body>
+</html>
